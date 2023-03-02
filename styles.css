@@ -1,0 +1,207 @@
+body{
+    font-family: sans-serif;
+    overflow-x: hidden;
+    background: #111;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sign-up{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+    width: 200%;
+    color: #fff;
+    transition: 0.5s ease-in-out;
+}
+
+/* Dynamic class for JS */
+.form-show{
+    width: 100%;
+    left: 0;
+}
+
+.bg-video, .sign-up-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+.bg-video{
+    overflow: hidden;
+    position: relative;
+    transition: 0.3s;
+}
+
+.bg-video video{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+.bg-video::before{
+    content: '';
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.bg-video .content{
+    position: relative;
+}
+
+.bg-video h1{
+    font-family: 'Oswald';
+    font-size: 3.5em;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.2em;
+    letter-spacing: 0.4em;
+}
+
+.sign-up-form{
+    background: #1f2025;
+    position: relative;
+}
+
+.input-wrap{
+    margin: 3em 0;
+    position: relative;
+}
+
+input, button{
+    background: none;
+    border: none;
+}
+
+.input-wrap input{
+    border-bottom: 1px #878787 solid;
+    padding: 0.3em 0;
+    min-width: 300px;
+    color: #ff5e3a;
+    font-size: 1.1em;
+}
+
+.input-wrap input:focus{
+    outline: none;
+    border-bottom: 1px #ff5e3a solid;
+}
+
+.sign-up-form .btn{
+    margin: 2em 0;
+}
+
+/* Dynamic class for JS */
+.input-focused{
+    font-size: 0.8em;
+    top: -1em;
+}
+
+label{
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.age>div{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.switch{
+    margin: 0.6em 0;
+    position: relative;
+    width: 2.5em;
+    height: 1.5em;
+}
+
+.slider{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #a6a6a6;
+    border-radius: 2em;
+}
+
+.switch input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.slider::before{
+    content: '';
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0.3em;
+    transition: 0.3s;
+}
+
+.switch input:checked + .slider{
+    background: #ff5e3a;
+}
+
+.switch input:checked + .slider::before{
+    left: 1.2em;
+}
+
+button{
+    color: #fff;
+}
+
+.btn{
+    margin: 2em auto;
+    display: block;
+    padding: 0.5em 2em;
+    border-radius: 3em;
+    border: 2px #fff solid;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background: white;
+    color: black;
+}
+
+.close{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    cursor: pointer;
+    color: #ccc;
+}
+
+/* Responsive design */
+
+@media screen and (max-width: 760px) {
+    .form-show{
+        transform: translateX(-50%);
+        width: 200%;
+    }
+}
