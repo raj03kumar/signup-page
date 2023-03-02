@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Google material symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <title>Sign-up</title>
+</head>
+<body>
+    <section class="sign-up">
+        <div class="bg-video">
+            <div class="content">
+                <h1>
+                    Welcome To <br>
+                    Steel City
+                </h1>
+                <button class="btn" id="form-open-btn">
+                    Sign Up
+                </button>
+            </div>
+            <video src="assets/bg.mp4" autoplay loop muted></video>
+        </div>
+        <div class="sign-up-form">
+            <form action="">
+                <div class="input-wrap">
+                    <label for="name">Full Name</label>
+                    <input type="text" name="name" required>
+                </div>
+                <div class="input-wrap">
+                    <label for="mail">Email Address</label>
+                    <input type="email" name="mail" required>
+                </div>
+                <div class="age">
+                    <small>I am over 13 years of age</small>
+                    <div>
+                        <small>No</small>
+                        <div class="switch">
+                            <input type="checkbox" name="" id="">
+                            <span class="slider"></span>
+                        </div>
+                        <small>Yes</small>
+                    </div>
+                </div>
+                <button type="submit" class="btn">
+                    Sign Me Up!
+                </button>
+            </form>
+            <button class="close">
+                <span class="material-symbols-outlined">
+                    close
+                </span>
+            </button>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>
